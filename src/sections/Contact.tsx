@@ -23,35 +23,48 @@ export const Contact = ({
         }
       }}
     >
-      <ul>
+      <p className="handwriting text-2xl">Contact</p>
+      <ul className="flex flex-col text-base items-start">
         <li key="email">
-          email:{' '}
-          <a href="" target="_blank" rel="me noreferrer">
+          <span>Email:</span>
+          <a
+            href=""
+            target="_blank"
+            rel="me noreferrer"
+            className="text-base "
+          >
             {siteConfig.author.email}
           </a>
         </li>
         <li key="github">
-          Github:{' '}
+          <span>Github:</span>
           <a
             href="{siteConfig.links.github}"
             target="_blank"
             rel="me noreferrer"
+            className="text-base "
           >
             {siteConfig.links.github}
           </a>
         </li>
         <li key="blog">
-          Blog:{' '}
-          <a href="{siteConfig.url}" target="_blank" rel="me noreferrer">
+          <span>Blog:</span>
+          <a
+            href="{siteConfig.url}"
+            target="_blank"
+            rel="me noreferrer"
+            className="text-base"
+          >
             {siteConfig.url}
           </a>
         </li>
         <li key="twitter">
-          Twitter:{' '}
+          <span>Twitter:</span>
           <a
             href="{`https://twitter.com/`+siteConfig.twitter.handle}"
             target="_blank"
             rel="me noreferrer"
+            className="text-base"
           >
             {siteConfig.twitter.handle}
           </a>

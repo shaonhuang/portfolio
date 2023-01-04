@@ -31,41 +31,42 @@ export const Skills = ({
   };
 }) => (
   <section
-    ref={(cur:HTMLElement) => {
+    ref={(cur: HTMLElement) => {
       if (cur) {
         scrollRef.current[2] = cur;
       }
     }}
   >
-    <p className="handwriting">Skills</p>
-    <p>
-      Language
-      <Tag content="Typescript" Icon={IconBrandTypescript}></Tag>
-      <Tag content="Javascript" Icon={IconBrandJavascript}></Tag>
-      <Tag content="Python" Icon={IconBrandPython}></Tag>
-    </p>
-    <p>
-      Frontend
-      <Tag content="React" Icon={IconBrandReact}></Tag>
-      <Tag content="Vue" Icon={IconBrandVue}></Tag>
-      <Tag content="HTML" Icon={IconBrandHtml5}></Tag>
-      <Tag content="CSS" Icon={IconBrandCss3}></Tag>
-    </p>
-    <p>
-      Backend
-      <Tag content="Django" Icon={IconBrandDjango}></Tag>
-    </p>
-    <p>
-      Design
-      <Tag content="Photoshop"></Tag>
-      <Tag content="illustrator"></Tag>
-      <Tag content="Sketch"></Tag>
-    </p>
-    <p>
-      Tools
-      <Tag content="Git" Icon={IconBrandGit}></Tag>
-      <Tag content="Stack" Icon={IconBrandSlack}></Tag>
-      <Tag content="Sketch" Icon={IconBrandSketch}></Tag>
-    </p>
+    <p className="handwriting text-2xl">Skills</p>
+    <div className="flex flex-col items-start">
+      <p>
+        <span>Language:</span>
+        <Tag content="Typescript" Icon={IconBrandTypescript}></Tag>
+        <Tag content="Javascript" Icon={IconBrandJavascript}></Tag>
+        <Tag content="Python" Icon={IconBrandPython}></Tag>
+      </p>
+      <p>
+        <span>Frontend:</span> <Tag content="React" Icon={IconBrandReact}></Tag>
+        <Tag content="Vue" Icon={IconBrandVue}></Tag>
+        <Tag content="HTML" Icon={IconBrandHtml5}></Tag>
+        <Tag content="CSS" Icon={IconBrandCss3}></Tag>
+      </p>
+      <p>
+        <span>Backend:</span>
+        <Tag content="Django" Icon={IconBrandDjango}></Tag>
+      </p>
+      <p>
+        <span>Design:</span>
+        <Tag content="Photoshop"></Tag>
+        <Tag content="illustrator"></Tag>
+        <Tag content="Sketch"></Tag>
+      </p>
+      <p>
+        <span>Tools:</span>
+        <Tag content="Git" Icon={IconBrandGit}></Tag>
+        <Tag content="Stack" Icon={IconBrandSlack}></Tag>
+        <Tag content="Sketch" Icon={IconBrandSketch}></Tag>
+      </p>
+    </div>
   </section>
 );

@@ -7,7 +7,7 @@ import { Intro } from './sections/Intro';
 import { Projects } from './sections/Projects';
 import { Skills } from './sections/Skills';
 import Timeline from './sections/Timeline';
-//TODO: fix any
+//FIXME: fix any
 function App() {
   const scrollRef = useRef<any>([]);
   const [currentIndex, setCurrentIndex] = useState(new Set([0]));
@@ -71,7 +71,7 @@ function App() {
         </a>
       </header> */}
       <Layout ref={scrollRef} currentIndex={currentIndex}>
-        <div className="flex flex-col">
+        <div className="flex flex-col flex-col items-center">
           <Intro scrollRef={scrollRef} />
           <Contact scrollRef={scrollRef} />
           <Skills scrollRef={scrollRef} />

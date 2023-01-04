@@ -16,9 +16,11 @@ function Timeline({
     })
     .then((text) => setProject(text));
   return (
-    <section ref={(cur:HTMLElement) => (scrollRef.current[4] = cur)}>
-      Timeline
-      <MarkdownRenderer>{project}</MarkdownRenderer>
+    <section ref={(cur: HTMLElement) => (scrollRef.current[4] = cur)}>
+      <p className="handwriting text-2xl">Timeline</p>
+      <div className="text-left prose lg:prose-xl">
+        <MarkdownRenderer>{project}</MarkdownRenderer>
+      </div>
     </section>
   );
 }

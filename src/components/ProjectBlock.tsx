@@ -20,7 +20,7 @@ const Tag = ({ content, Icon }: TagProps) => (
     {Icon ? <Icon className="inline-block" size="1em" /> : <></>}
   </span>
 );
-// TODO: fix any
+// FIXME: fix any
 function ProjectBlock({ data }: { data: any }) {
   const [project, setProject] = useState('');
   fetch(data.md)
@@ -48,7 +48,7 @@ function ProjectBlock({ data }: { data: any }) {
         )}
         <br />
       </div>
-      <div style={{ maxWidth: '500px' }}>
+      <div style={{ maxWidth: '500px' }} className="prose lg:prose-xl">
         <MarkdownRenderer>{project}</MarkdownRenderer>
         <div
           style={{

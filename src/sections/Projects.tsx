@@ -32,8 +32,8 @@ export const Projects = ({
 }) => {
   return (
     <section ref={(cur: HTMLElement) => (scrollRef.current[3] = cur)}>
-      <p className="handwriting">Projects</p>
-      <p>Work Experience & Projects</p>
+      <p className="handwriting text-2xl">Projects</p>
+      <p className="text-1xl">Work Experience & Projects</p>
       <div>
         {MapProject(work)}
         <br />
