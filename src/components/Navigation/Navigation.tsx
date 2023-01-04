@@ -6,7 +6,7 @@ type content = {
 };
 export const NavBar = forwardRef<JSX.Element, content>((props, scrollRef) => {
   return (
-    <nav className={`flex flex-col z-10 text-4xl ` + props.className}>
+    <nav className={`flex flex-col z-10 text-4xl w-fit ` + props.className}>
       <NavButton
         index={0}
         size={32}
@@ -24,12 +24,19 @@ export const NavBar = forwardRef<JSX.Element, content>((props, scrollRef) => {
       <NavButton
         index={2}
         size={32}
-        title="Project"
+        title="Skills"
         ref={scrollRef}
         currentIndex={props.currentIndex}
       />
       <NavButton
         index={3}
+        size={32}
+        title="Project"
+        ref={scrollRef}
+        currentIndex={props.currentIndex}
+      />
+      <NavButton
+        index={4}
         size={32}
         title="Timeline"
         ref={scrollRef}

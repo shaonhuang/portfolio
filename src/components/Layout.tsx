@@ -14,7 +14,7 @@ const Layout = forwardRef((props: LayoutProps, scrollRef: any) => {
         currentIndex={currentIndex}
         className="fixed top-0 left-0 right-0"
       ></NavBar>
-      <div className="flex container mx-auto min-h-screen min-w-[360px] px-5">
+      <div className="flex justify-center container mx-auto min-h-screen min-w-[360px] px-5">
         {children}
       </div>
     </div>

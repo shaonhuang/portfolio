@@ -71,7 +71,7 @@ function App() {
         </a>
       </header> */}
       <Layout ref={scrollRef} currentIndex={currentIndex}>
-        <div className="flex flex-col flex-col items-center">
+        <div className="flex flex-col items-center">
           <Intro scrollRef={scrollRef} />
           <Contact scrollRef={scrollRef} />
           <Skills scrollRef={scrollRef} />

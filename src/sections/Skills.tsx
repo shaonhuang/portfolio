@@ -36,9 +36,10 @@ export const Skills = ({
         scrollRef.current[2] = cur;
       }
     }}
+    className="flex flex-col w-full"
   >
     <p className="handwriting text-2xl">Skills</p>
-    <div className="flex flex-col items-start">
+    <div className="flex flex-col items-start prose lg:prose-xl text-left justify-start px-auto grow">
       <p>
         <span>Language:</span>
         <Tag content="Typescript" Icon={IconBrandTypescript}></Tag>

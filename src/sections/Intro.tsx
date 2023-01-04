@@ -19,12 +19,12 @@ export const Intro = ({
       className="py-2"
     >
       <p>Intro</p>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center prose lg:prose-xl">
         <img
           src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"
           alt="avatar"
         />
-        <div className="flex flex-col text-left px-5 text-base">
+        <div className="flex flex-col text-left px-5">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad vero sed
             recusandae amet rerum distinctio aliquam illo? Aliquam dolor eaque,

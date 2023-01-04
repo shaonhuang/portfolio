@@ -29,35 +29,27 @@ function ProjectBlock({ data }: { data: any }) {
     })
     .then((text) => setProject(text));
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        padding: '20px 0px',
-      }}
-    >
-      <div style={{ width: '250px' }}>
+    <div className="flex flex-wrap py-5 prose lg:prose-xl">
+      <div className="basis-1/3">
         <p>{data.title}</p>
         <p style={{ fontSize: '14px', color: 'gray' }}>{data.date}</p>
         {data.img ? (
           <div style={{ padding: '10px 0px' }}>
-            <img src={data.img} alt={data.title} width="100px" />
+            <img
+              src={data.img}
+              alt={data.title}
+              width="100px"
+              className="mx-auto"
+            />
           </div>
         ) : (
           <></>
         )}
         <br />
       </div>
-      <div style={{ maxWidth: '500px' }} className="prose lg:prose-xl">
+      <div className=" basis-2/3 text-left">
         <MarkdownRenderer>{project}</MarkdownRenderer>
-        <div
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: '10px',
-            marginTop: '15px',
-          }}
-        >
+        <div>
           {data.tag?.map((data: string) => (
             <Tag content={data} />
           ))}

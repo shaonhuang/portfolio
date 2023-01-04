@@ -22,17 +22,13 @@ export const Contact = ({
           scrollRef.current[1] = cur;
         }
       }}
+      className="flex flex-col w-full"
     >
       <p className="handwriting text-2xl">Contact</p>
-      <ul className="flex flex-col text-base items-start">
+      <ul className="flex flex-col text-base items-start prose lg:prose-xl text-left justify-start grow">
         <li key="email">
           <span>Email:</span>
-          <a
-            href=""
-            target="_blank"
-            rel="me noreferrer"
-            className="text-base "
-          >
+          <a href="" target="_blank" rel="me noreferrer">
             {siteConfig.author.email}
           </a>
         </li>
@@ -42,7 +38,6 @@ export const Contact = ({
             href="{siteConfig.links.github}"
             target="_blank"
             rel="me noreferrer"
-            className="text-base "
           >
             {siteConfig.links.github}
           </a>
