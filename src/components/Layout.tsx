@@ -8,15 +8,18 @@ interface LayoutProps {
 const Layout = forwardRef((props: LayoutProps, scrollRef: any) => {
   const { children, currentIndex } = props;
   return (
-    <div>
+    <div className="container min-h-screen mx-auto">
       <NavBar
         ref={scrollRef}
         currentIndex={currentIndex}
-        className="fixed top-0 left-0 right-0"
+        className="landscape:hidden fixed top-6 left-2 right-0 max-sm:hidden max-md:hidden"
       ></NavBar>
-      <div className="flex justify-center container mx-auto min-h-screen min-w-[360px] px-5">
-        {children}
-      </div>
+      <NavBar
+        ref={scrollRef}
+        currentIndex={currentIndex}
+        className="portrait:hidden fixed top-6 sm:left-2 lg:left-6 right-0 max-sm:hidden max-md:hidden"
+      ></NavBar>
+      <div className="flex justify-center mx-auto p-5">{children}</div>
     </div>
   );
 });

@@ -29,7 +29,7 @@ function ProjectBlock({ data }: { data: any }) {
     })
     .then((text) => setProject(text));
   return (
-    <div className="flex flex-wrap py-5 prose lg:prose-xl">
+    <div className="flex flex-wrap justify-center py-5 prose lg:prose-xl">
       <div className="basis-1/3">
         <p>{data.title}</p>
         <p style={{ fontSize: '14px', color: 'gray' }}>{data.date}</p>
@@ -50,8 +50,8 @@ function ProjectBlock({ data }: { data: any }) {
       <div className=" basis-2/3 text-left">
         <MarkdownRenderer>{project}</MarkdownRenderer>
         <div>
-          {data.tag?.map((data: string) => (
-            <Tag content={data} />
+          {data.tag?.map((data: string, id: number) => (
+            <Tag content={data} key={id} />
           ))}
         </div>
       </div>

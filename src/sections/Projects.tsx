@@ -7,13 +7,6 @@ interface ProjectsProps {
   md: string;
   tag: Array<string>;
 }
-// interface dataProps {
-//   img: string;
-//   date: string;
-//   title: string;
-//   md: string;
-//   tag: Array<string>;
-// }
 //TODO: fix any
 const MapProject = (projects: Array<ProjectsProps>) => {
   return projects.map((data: any) => (
@@ -31,7 +24,10 @@ export const Projects = ({
   };
 }) => {
   return (
-    <section ref={(cur: HTMLElement) => (scrollRef.current[3] = cur)}>
+    <section
+      ref={(cur: HTMLElement) => (scrollRef.current[3] = cur)}
+      className="prose"
+    >
       <p className="handwriting text-2xl">Projects</p>
       <p className="text-1xl">Work Experience & Projects</p>
       <div>

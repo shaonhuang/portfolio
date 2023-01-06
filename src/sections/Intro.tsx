@@ -16,10 +16,10 @@ export const Intro = ({
           scrollRef.current[0] = cur;
         }
       }}
-      className="py-2"
+      className="py-2 w-full"
     >
       <p>Intro</p>
-      <div className="flex justify-center items-center prose lg:prose-xl">
+      <div className="flex justify-center items-center prose lg:prose-xl mx-auto">
         <img
           src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"
           alt="avatar"
