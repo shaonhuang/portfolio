@@ -1,4 +1,6 @@
 import { useTranslation } from 'react-i18next';
+import SectionTitle from '../components/SectionTitle';
+
 import siteConfig from '../site.config';
 function Text() {
   const { t } = useTranslation();
@@ -25,6 +27,14 @@ const contactData = [
     url: siteConfig.twitter.handle,
   },
 ];
+const isUrl = (url: string) => {
+  try {
+    new URL(url);
+    return true;
+  } catch {
+    return false;
+  }
+};
 
 export const Contact = ({
   scrollRef,
@@ -41,7 +51,7 @@ export const Contact = ({
         }
       }}
     >
-      <p className="handwriting text-2xl">Contact</p>
+      <SectionTitle title="Contact" />
       <table className="prose lg:prose-xl text-left w-auto">
         <tbody>
           {contactData
@@ -49,8 +59,15 @@ export const Contact = ({
               <tr key={id}>
                 <th>{item.media}:</th>
                 <td>
-                  <a href={item.link} target="_blank" rel="me noreferrer">
-                    {item.url}
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="me noreferrer"
+                    className="whitespace-nowrap"
+                  >
+                    {isUrl(item.url)
+                      ? item.url.replace(/^https?:\/\//, '')
+                      : item.url}
                   </a>
                 </td>
               </tr>

@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
-
+import ProfileImg from '../assets/profile.jpg';
+import SectionTitle from '../components/SectionTitle';
 export default Text;
 export const Intro = ({
   scrollRef,
@@ -18,30 +19,18 @@ export const Intro = ({
       }}
       className="py-2 w-full"
     >
-      <p>Intro</p>
-      <div className="flex justify-center items-center prose lg:prose-xl mx-auto">
+      <SectionTitle title="Intro"></SectionTitle>
+      <div className="prose lg:prose-xl mx-auto flex px-5 flex-wrap">
         <img
-          src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"
+          src={ProfileImg}
           alt="avatar"
+          className="h-auto max-w-xs h-fit rounded-lg shadow-xl dark:shadow-gray-800 m-0"
         />
-        <div className="flex flex-col text-left px-5">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad vero sed
-            recusandae amet rerum distinctio aliquam illo? Aliquam dolor eaque,
-            tempore repellendus, aut eius magni vel vitae rerum est cumque.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-            sapiente, praesentium reprehenderit sed sequi ratione laboriosam
-            quam, animi minima voluptatibus magnam ullam a repellendus expedita,
-            perferendis possimus corrupti! Perspiciatis, voluptatum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
-            optio ut odio delectus culpa. Iure omnis ipsa sint tenetur odio
-            neque non ex, animi accusantium quos itaque quae, optio illum?
-          </p>
-        </div>
+        <p className="text-left m-0">
+          我叫黄宇快，即将2022年毕业于数字媒体技术专业后，我将开始作为一名前端开发者参加工作。
+          <br />
+          作为一名前端开发者，我特别欣赏那些别具一格的网站，并且我最大的爱好就是收集这些网站，以便于在我构思自己的作品时能带给我启发。我热爱设计，无论是在我的作品还是我的生活空间，我都会努力让它们拥有最佳的体验。
+        </p>
       </div>
     </section>
   );

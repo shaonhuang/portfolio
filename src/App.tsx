@@ -71,10 +71,12 @@ function App() {
         </a>
       </header> */}
       <Layout ref={scrollRef} currentIndex={currentIndex}>
-        <div className="flex flex-col items-center w-full">
+        <div className="flex flex-col items-center w-full gap-8">
           <Intro scrollRef={scrollRef} />
-          <Contact scrollRef={scrollRef} />
-          <Skills scrollRef={scrollRef} />
+          <div className="prose">
+            <Contact scrollRef={scrollRef} />
+            <Skills scrollRef={scrollRef} />
+          </div>
           <Projects scrollRef={scrollRef} />
           <Timeline scrollRef={scrollRef} />
         </div>

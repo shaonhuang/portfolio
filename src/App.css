@@ -39,6 +39,10 @@
     transform: rotate(360deg);
   }
 }
+mark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
 
 .icons {
   color: grey;

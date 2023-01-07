@@ -1,5 +1,5 @@
 import * as allIcons from 'tabler-icons-react';
-// debugger
+import SectionTitle from '../components/SectionTitle';
 interface TagProps {
   content: string;
   Icon?: string;
@@ -72,7 +72,7 @@ export const Skills = ({
       }
     }}
   >
-    <p className="handwriting text-2xl">Skills</p>
+    <SectionTitle title="Skills" />
     <table className="flex flex-col items-start prose lg:prose-xl text-left justify-start px-auto grow">
       <tbody className="w-full">
         {skillsData

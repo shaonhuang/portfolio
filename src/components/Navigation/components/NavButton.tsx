@@ -20,7 +20,7 @@ const NavButton = forwardRef<any, content>((props, scrollRef: any) => {
       <button onClick={onScroll}>
         <p
           className={
-            'handwriting ' + (isCurrent ? 'opacity-100' : 'opacity-30')
+            'handwriting pr-1 ' + (isCurrent ? 'opacity-100' : 'opacity-30')
           }
         >
           {props.title}

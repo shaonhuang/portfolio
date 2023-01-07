@@ -1,4 +1,5 @@
 import ProjectBlock from '../components/ProjectBlock';
+import SectionTitle from '../components/SectionTitle';
 import { personal, work } from '../markdown/projects';
 interface ProjectsProps {
   id: number;
@@ -28,8 +29,10 @@ export const Projects = ({
       ref={(cur: HTMLElement) => (scrollRef.current[3] = cur)}
       className="prose"
     >
-      <p className="handwriting text-2xl">Projects</p>
-      <p className="text-1xl">Work Experience & Projects</p>
+      <SectionTitle title="Projects" />
+      <p className="text-2xl text-left">
+        <strong>Work Experience & Projects</strong>
+      </p>
       <div>
         {MapProject(work)}
         <br />

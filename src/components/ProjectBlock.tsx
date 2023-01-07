@@ -1,12 +1,7 @@
 import { useState } from 'react';
+import * as allIcons from 'tabler-icons-react';
 import MarkdownRenderer from './MarkdownRenderer';
 
-import type { TablerIcon } from '@tabler/icons';
-
-interface TagProps {
-  content: string;
-  Icon?: TablerIcon;
-}
 interface dataProps {
   img: string;
   date: string;
@@ -14,12 +9,21 @@ interface dataProps {
   md: string;
   tag: Array<string>;
 }
-const Tag = ({ content, Icon }: TagProps) => (
-  <span>
-    {content}
-    {Icon ? <Icon className="inline-block" size="1em" /> : <></>}
-  </span>
-);
+
+interface TagProps {
+  content: string;
+  Icon?: string;
+}
+const Tag = ({ content, Icon }: TagProps) => {
+  // @ts-ignore
+  const Item = Icon ? allIcons[Icon] : undefined;
+  return (
+    <div className="bg-slate-200 rounded-3xl px-3 whitespace-nowrap">
+      {content}
+      {Item ? <Item className="inline-block" size="1em" /> : <></>}
+    </div>
+  );
+};
 // FIXME: fix any
 function ProjectBlock({ data }: { data: any }) {
   const [project, setProject] = useState('');
@@ -47,11 +51,11 @@ function ProjectBlock({ data }: { data: any }) {
         )}
         <br />
       </div>
-      <div className=" basis-2/3 text-left">
+      <div className="basis-2/3 text-left">
         <MarkdownRenderer>{project}</MarkdownRenderer>
-        <div>
+        <div className="flex gap-2 flex-wrap">
           {data.tag?.map((data: string, id: number) => (
-            <Tag content={data} key={id} />
+            <Tag content={data} Icon={`Brand${data}`} key={id} />
           ))}
         </div>
       </div>
