@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './App.css';
 import Layout from './components/Layout';
+import { NavBar } from './components/Navigation/Navigation';
 import { Contact } from './sections/Contact';
 import { Intro } from './sections/Intro';
 import { Projects } from './sections/Projects';
@@ -71,14 +72,21 @@ function App() {
         </a>
       </header> */}
       <Layout ref={scrollRef} currentIndex={currentIndex}>
-        <div className="flex flex-col items-center w-full gap-8">
-          <Intro scrollRef={scrollRef} />
-          <div className="prose">
-            <Contact scrollRef={scrollRef} />
-            <Skills scrollRef={scrollRef} />
+        <div className="flex">
+          <NavBar
+            ref={scrollRef}
+            currentIndex={currentIndex}
+            className="max-sm:hidden max-md:hidden"
+          ></NavBar>
+          <div>
+            <Intro scrollRef={scrollRef} />
+            <div className="prose">
+              <Contact scrollRef={scrollRef} />
+              <Skills scrollRef={scrollRef} />
+            </div>
+            <Projects scrollRef={scrollRef} />
+            <Timeline scrollRef={scrollRef} />
           </div>
-          <Projects scrollRef={scrollRef} />
-          <Timeline scrollRef={scrollRef} />
         </div>
       </Layout>
     </div>
